@@ -17,10 +17,16 @@ RUN chmod +x /build_openssh.sh
 RUN set -ex; \
 	\
  apk add --no-cache --virtual .build-deps \
-		curl \
+		coreutils \
 		gcc \
+		curl \
 		linux-headers \
 		make \
+		musl-dev \
+		zlib \
+		zlib-dev \
+		openssl \
+		openssl-dev \
 	; \
   ansibleList=' \
             pycrypto==2.6.1 \
