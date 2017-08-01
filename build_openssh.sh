@@ -33,6 +33,6 @@ cd $OPENSSH
 ./configure --prefix=$PREFIX --with-zlib=../$ZLIB --with-ssl-dir=../$OPENSSL && make \
 && make install \
 && cd ../.. \
-&& rm -rf src
-&& cp $PREFIX/bin/* /usr/local/bin/
+&& rm -rf src \
+&& cp $PREFIX/bin/* /usr/local/bin/ \
 && rm -rf $PREFIX/libexec $PREFIX/sbin $PREFIX/bin/*
