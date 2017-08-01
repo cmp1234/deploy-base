@@ -30,10 +30,10 @@ RUN set -ex; \
 	; \
   ansibleList=' \
             pycrypto==2.6.1 \
-            ecdsa==0.11 \
+            ecdsa==0.13 \
             paramiko==1.17.0 \
             MarkupSafe==1.0 \
-            Jinja2==2.7.3 \
+            Jinja2==2.8 \
             PyYAML==3.11 \
             ansible==2.2.1.0 \
         '; \
