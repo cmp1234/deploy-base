@@ -34,3 +34,5 @@ cd $OPENSSH
 && make install \
 && cd ../.. \
 && rm -rf src
+&& cp $PREFIX/bin/* /usr/local/bin/
+&& rm -rf $PREFIX/libexec $PREFIX/sbin $PREFIX/bin/*
