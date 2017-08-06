@@ -18,6 +18,7 @@ RUN set -ex; \
 	\
  apk add --no-cache --virtual .build-deps \
 		coreutils \
+		bash \
 		gcc \
 		curl \
 		linux-headers \
