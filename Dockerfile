@@ -57,4 +57,5 @@ RUN set -ex; \
 	; \
   /build_openssh.sh; \
 	apk del .build-deps; \
+	ln -s /usr/local/bin/bash /bin/bash; \
 	rm -f /build_openssh.sh;
