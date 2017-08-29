@@ -1,4 +1,4 @@
-From cmp1234/python-jre:2.7.13-8u131-alpine3.6
+From cmp1234/python-jre:security-latest-alpine3.6
 
 MAINTAINER Wang Lilong <wanglilong007@gmail.com>
 
