@@ -8,9 +8,6 @@ ENV SSH_DOWNLOAD_URL http://mirrors.sonic.net/pub/OpenBSD/OpenSSH/portable/opens
 ENV SSHPASS_VERSION 1.06
 ENV SSHPASS_DOWNLOAD_URL https://nchc.dl.sourceforge.net/project/sshpass/sshpass/1.06/sshpass-1.06.tar.gz
 
-ENV YAML_VERSION 0.1.6
-ENV YAML_DOWNLOAD_URL  http://pyyaml.org/download/libyaml/yaml-0.1.6.tar.gz
-
 COPY build_openssh.sh /build_openssh.sh 
 RUN chmod +x /build_openssh.sh
 
@@ -46,11 +43,6 @@ RUN set -ex; \
   tar xvf sshpass-${SSHPASS_VERSION}.tar.gz; \
   cd sshpass-${SSHPASS_VERSION}; \
   ./configure --prefix=/usr/local && make && make install && cd .. && rm sshpass-${SSHPASS_VERSION}* -rf; \
-  \
-  curl -fSL $YAML_DOWNLOAD_URL -o yaml-${YAML_VERSION}.tar.gz; \
-  tar xvf yaml-${YAML_VERSION}.tar.gz; \
-  cd yaml-${YAML_VERSION}; \
-  ./configure --prefix=/usr/local && make && make install && cd .. && rm yaml-${YAML_VERSION}* -rf; \
   \
 	apk add --no-cache --virtual .run-deps \
 		libcrypto1.0 \
