@@ -13,6 +13,8 @@ RUN chmod +x /build_openssh.sh
 
 RUN set -ex; \
 	\
+apk del python \
+apk add --no-cache python \
  apk add --no-cache --virtual .build-deps \
 		coreutils \
 		bash \
